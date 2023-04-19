@@ -1,0 +1,49 @@
+{
+  "name": "web-project-with-npm-as-build-tool",
+  "version": "0.0.1",
+  "description": "Generic web project using only NPM as the build tool.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "copy": "cp src/index.html dist/ && cp README.md dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/css/main.scss dist/css/main.css",
+    "concat:css": "concat -o dist/css/main.css dist/css/main.css src/css/test.css",
+    "concat:js": "mkdir -p dist/js && concat -o dist/js/scripts.js src/js/vendor.js src/js/plugins.js src/js/utils.js src/js/main.js",
+    "concat": "npm run concat:css && npm run concat:js",
+    "cssmin": "cleancss -o dist/css/main.min.css dist/css/main.css",
+    "uglify": "uglifyjs -o dist/js/scripts.min.js dist/js/scripts.js",
+    "build:css": "npm run scss && npm run concat:css && npm run cssmin",
+    "build:js": "npm run concat:js && npm run uglify",
+    "build": "npm run copy && npm run build:css && npm run build:js",
+    "watch:css": "onchange 'src/css/**/*' -- npm run build:css",
+    "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
+    "watch:html": "onchange 'src/*.html' -- npm run copy",
+    "watch": "npm-run-all --parallel watch:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattdanielbrown/web-project-with-npm-as-build-tool.git"
+  },
+  "author": "Matt Daniel Brown <mattdbrown@protonmail.com> (https://mattdbrown.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattdanielbrown/web-project-with-npm-as-build-tool/issues"
+  },
+  "homepage": "https://github.com/mattdanielbrown/web-project-with-npm-as-build-tool#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "concat": "^1.0.3",
+    "npm": "^9.6.4",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "sass": "^1.60.0",
+    "uglify-js": "^3.17.4"
+  },
+  "dependencies": {
+    "inter-ui": "^3.19.3",
+    "mobi.css": "^3.1.1",
+    "modern-normalize": "^1.1.0",
+    "sanitize.css": "^13.0.0"
+  }
+}

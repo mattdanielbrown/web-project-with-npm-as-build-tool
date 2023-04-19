@@ -1,0 +1,103 @@
+
+html {
+	font-size : $font-size;
+}
+
+body {
+	position : relative;
+}
+
+html, body, p, input, select, option, optgroup, label, textarea, h1, h2, h3, h4, h5, h6 {
+	font-family : $font-family;
+	line-height : 1;
+}
+
+p {
+	line-height : 1.5;
+	margin      : 0 auto 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	display     : block;
+	font-weight : 600;
+	line-height : 1;
+	margin      : 0 auto 1rem;
+	width       : 100%;
+}
+
+.lead {
+	font-size   : x-large;
+	font-weight : 500;
+}
+
+section:not(.page-header) {
+	& > h2:first-of-type {
+		margin-bottom : 2rem;
+		margin-top    : 0;
+	}
+	
+	h2 + h3 {
+		color         : red;
+		margin-bottom : 1rem;
+		margin-top    : 1.5rem;
+	}
+	
+	p + h3, p + h4, p + h5, p + h6 {
+		color         : blue;
+		margin-bottom : 1rem;
+		margin-top    : 2rem;
+	}
+	
+	h3 + h4, h4 + h5, h5 + h6 {
+		margin-top : 0;
+	}
+}
+
+a, a:link, a:any-link {
+	@extend %fix-iOS-tap-highlight;
+	@extend %apply-focus-fx;
+	border-radius   : .25em;
+	color           : $primary-color;
+	cursor          : pointer;
+	display         : inline-block;
+	font-weight     : inherit;
+	position        : relative;
+	text-decoration : none;
+	transition      : all 200ms;
+	@include apply-color-for-state-changes($primary-color);
+	&::before {
+		background-color : rgba($primary-color, 0);
+		bottom           : -.125rem;
+		content          : '';
+		height           : .125rem;
+		left             : 0;
+		position         : absolute;
+		right            : 0;
+		transition       : all 200ms;
+		width            : 0;
+	}
+	&:hover {
+		
+		&::before {
+			background-color : rgba($primary-color, 0.5);
+			content          : '';
+			position         : absolute;
+			width            : 100%;
+		}
+	}
+	&:focus {
+		outline-offset : 3px !important;
+	}
+}
+
+.skip-to-main-content-anchor {
+	background    : $primary-color;
+	border-radius : 0 0 .5rem .5rem !important;
+	color         : white !important;
+	font-weight   : 600 !important;
+	left          : 2em;
+	padding       : .75em;
+	position      : absolute;
+	top           : 0;
+	transform     : translate3d(0, -2.5rem, 0);
+}

@@ -1,0 +1,417 @@
+/*--------------------------------
+
+Nucleo Web Font
+Generated using nucleoapp.com
+
+-------------------------------- */
+@font-face {
+  font-family: 'Nucleo';
+  src: url('../../fonts/Nucleo.eot');
+  src: url('../../fonts/Nucleo.eot') format('embedded-opentype'), url('../../fonts/Nucleo.woff2') format('woff2'), url('../../fonts/Nucleo.woff') format('woff'), url('../../fonts/Nucleo.ttf') format('truetype'), url('../../fonts/Nucleo.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --------------------------------
+
+Reset
+
+-------------------------------- */
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+* {
+  font: inherit;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: system-ui, sans-serif;
+  color: hsl(240, 4%, 20%);
+  padding: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main, form legend {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  margin: 0;
+}
+
+a {
+  color: hsl(230, 93%, 66%);
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+header {
+  text-align: center;
+  margin: 3em auto;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 1em;
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul li {
+  border-radius: .4em;
+  transition: background-color .2s;
+  user-select: none;
+  overflow: hidden;
+  text-align: center;
+  padding: 1em;
+}
+
+ul li:hover {
+  background: hsla(0, 0%, 0%, 0.05);
+}
+
+ul p, ul em, ul input {
+  display: block;
+  font-size: 0.75rem;
+  color: hsla(0, 0%, 0%, 0.5);
+  user-select: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  max-width: 6rem;
+}
+
+ul p {
+  padding: 8px 0 4px;
+}
+
+ul p::selection, ul em::selection {
+  background: hsl(230, 93%, 66%);
+  color: #fff;
+}
+
+ul p::-moz-selection, ul em::-moz-selection {
+  background: hsl(230, 93%, 66%);
+  color: #fff;
+}
+
+ul em {
+  margin-bottom: 4px;
+}
+
+ul em::before {
+  content: '[';
+}
+ul em::after {
+  content: ']';
+}
+
+ul input {
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-family: auto;
+}
+
+/* --------------------------------
+
+icons
+
+-------------------------------- */
+.icon {
+  display: inline-block;
+  font: normal normal normal 32px/1 'Nucleo';
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------
+  font icons
+-------------------------*/
+
+.svg-f-check::before {
+  content: "\ea03";
+}
+
+.svg-heart::before {
+  content: "\ea04";
+}
+
+.svg-favorite::before {
+  content: "\ea05";
+}
+
+.svg-favorite-e::before {
+  content: "\ea06";
+}
+
+.svg-floppy-disk::before {
+  content: "\ea07";
+}
+
+.svg-letter::before {
+  content: "\ea08";
+}
+
+.svg-menu-8::before {
+  content: "\ea09";
+}
+
+.svg-phone::before {
+  content: "\ea0a";
+}
+
+.svg-star::before {
+  content: "\ea0b";
+}
+
+.svg-star-empty::before {
+  content: "\ea0c";
+}
+
+.svg-zoom::before {
+  content: "\ea0d";
+}
+
+.svg-c-check::before {
+  content: "\ea0e";
+}
+
+.svg-c-info::before {
+  content: "\ea0f";
+}
+
+.svg-c-info-e::before {
+  content: "\ea10";
+}
+
+.svg-c-remove::before {
+  content: "\ea11";
+}
+
+.svg-c-warning::before {
+  content: "\ea12";
+}
+
+.svg-c-warning-e::before {
+  content: "\ea13";
+}
+
+.svg-calendar::before {
+  content: "\ea14";
+}
+
+.svg-calendar-2::before {
+  content: "\ea15";
+}
+
+.svg-home-2::before {
+  content: "\ea16";
+}
+
+.svg-pen::before {
+  content: "\ea17";
+}
+
+.svg-alarm-3::before {
+  content: "\ea18";
+}
+
+.svg-alarm-2::before {
+  content: "\ea19";
+}
+
+.svg-alarm-1::before {
+  content: "\ea1a";
+}
+
+.svg-arrow-sm-left-3::before {
+  content: "\ea1b";
+}
+
+.svg-arrow-sm-left-2::before {
+  content: "\ea1c";
+}
+
+.svg-arrow-sm-left-1::before {
+  content: "\ea1d";
+}
+
+.svg-arrow-sm-left::before {
+  content: "\ea1e";
+}
+
+.svg-arrow-sm-right-3::before {
+  content: "\ea1f";
+}
+
+.svg-arrow-sm-right-2::before {
+  content: "\ea20";
+}
+
+.svg-arrow-sm-right-1::before {
+  content: "\ea21";
+}
+
+.svg-arrow-sm-right::before {
+  content: "\ea22";
+}
+
+.svg-at-sign-2-4::before {
+  content: "\ea23";
+}
+
+.svg-at-sign-2-3::before {
+  content: "\ea24";
+}
+
+.svg-at-sign-2-2::before {
+  content: "\ea25";
+}
+
+.svg-at-sign-2-1::before {
+  content: "\ea26";
+}
+
+.svg-menu-8-3::before {
+  content: "\ea27";
+}
+
+.svg-menu-8-2::before {
+  content: "\ea28";
+}
+
+.svg-menu-8-1::before {
+  content: "\ea29";
+}
+
+.svg-e-remove-3::before {
+  content: "\ea2a";
+}
+
+.svg-e-remove-2::before {
+  content: "\ea2b";
+}
+
+.svg-e-remove-1::before {
+  content: "\ea2c";
+}
+
+.svg-e-remove::before {
+  content: "\ea2d";
+}
+
+.svg-f-check-3::before {
+  content: "\ea2e";
+}
+
+.svg-f-check-2::before {
+  content: "\ea2f";
+}
+
+.svg-f-check-1::before {
+  content: "\ea30";
+}
+
+.svg-home-4::before {
+  content: "\ea31";
+}
+
+.svg-home-3::before {
+  content: "\ea32";
+}
+
+.svg-home-1::before {
+  content: "\ea33";
+}
+
+.svg-like-3::before {
+  content: "\ea34";
+}
+
+.svg-like-2::before {
+  content: "\ea35";
+}
+
+.svg-like-1::before {
+  content: "\ea36";
+}
+
+.svg-like::before {
+  content: "\ea37";
+}
+
+.svg-phone-3::before {
+  content: "\ea38";
+}
+
+.svg-phone-2::before {
+  content: "\ea39";
+}
+
+.svg-phone-1::before {
+  content: "\ea3a";
+}
+
+.svg-zoom-3::before {
+  content: "\ea3b";
+}
+
+.svg-zoom-2::before {
+  content: "\ea3c";
+}
+
+.svg-zoom-1::before {
+  content: "\ea3d";
+}
+

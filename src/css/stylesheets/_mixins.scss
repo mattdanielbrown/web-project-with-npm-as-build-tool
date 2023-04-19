@@ -1,0 +1,81 @@
+//==============================================================================
+// Mixins
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// Breakpoint Management (@media queries)
+//------------------------------------------------------------------------------
+
+/* Only after a specified width... */
+@mixin min-width($size:600px) {
+	@media screen and (min-width : $size) {
+		@content;
+	}
+}
+
+/* Only after a specified width... */
+@mixin max-width($size: 600px) {
+	@media screen and (max-width : (($size) - (1px))) {
+		@content;
+	}
+}
+
+/* Either before or after 600px width... */
+@mixin main-breakpoint($min-or-max: min) {
+	@if ($min-or-max == min) {
+		@media screen and (min-width : 600px) {
+			@content;
+		}
+	} @else if ($min-or-max == max) {
+		@media screen and (max-width : 599px) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width : 600px) {
+			@content;
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+// State-changing color properties
+//------------------------------------------------------------------------------
+
+@mixin apply-color-for-state-changes($base-color: $primary-color) {
+	color : $base-color;
+	&:hover {
+		color : hover-color($base-color);
+	}
+	&:focus {
+		color : focus-color($base-color);
+	}
+	&:active {
+		color : active-color($base-color);
+	}
+}
+
+@mixin apply-border-color-for-state-changes($base-color: $primary-color) {
+	border-color : $base-color;
+	&:hover {
+		border-color : hover-color($base-color);
+	}
+	&:focus {
+		border-color : $primary-color;
+	}
+	&:active {
+		border-color : active-color($base-color);
+	}
+}
+
+@mixin apply-background-color-for-state-changes($base-color: $primary-color) {
+	background-color : $base-color;
+	&:hover {
+		background-color : hover-color($base-color);
+	}
+	&:focus {
+		background-color : focus-color($base-color);
+	}
+	&:active {
+		background-color : active-color($base-color);
+	}
+}
