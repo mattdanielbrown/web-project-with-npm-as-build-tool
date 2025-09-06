@@ -590,10 +590,10 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
-concat@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/concat/-/concat-1.0.3.tgz"
-  integrity sha512-f/ZaH1aLe64qHgTILdldbvyfGiGF4uzeo9IuXUloIOLQzFmIPloy9QbZadNsuVv0j5qbKQvQb/H/UYf2UsKTpw==
+concat@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/concat/-/concat-3.0.0.tgz#0dfa426cc2ecb2ecc2ed4367fc7531a24e6e2a26"
+  integrity sha512-+fe0wAeRyeGHwWOu7Zmv84A2tUyFPeXFQsuEe09nms3t7VssFrQP29EG5e2ZuD3rQdwW9eggdUH2W/IU9gfpUQ==
   dependencies:
     commander "^2.9.0"
 
